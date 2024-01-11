@@ -1,0 +1,111 @@
+/* background #7bdaf3 */
+/* green #9ec862 */
+/* gray #9ec862 */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif
+}
+
+body {
+  background: #7bdaf3;
+}
+
+/* TOP */
+div .top {
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  width: 95%;
+}
+
+div .top button {
+  background: #9ec862;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+
+  transition: .3s;
+}
+div .top button:hover {
+  cursor: pointer;
+  background: rgba(172, 255, 47, 0.4);
+  box-shadow: 0px 0px 7px rgba(72, 255, 0, 0.763);
+}
+
+/* LIST */
+
+div .list {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div .item {
+  width: 300px;
+  min-height: 450px;
+  background: #eee;
+  box-shadow:  0px 0px 7px gray;
+}
+
+div .header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background-color: #9ec862;
+}
+
+button.controls {
+  background: #9ec862;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  padding: 5px;
+  opacity: 0.9;
+
+  transition: .3s;
+}
+
+button.controls:hover {
+  color: grey;
+  opacity: 1;
+  cursor: pointer;
+}
+
+button.delete:hover{
+  color: red;
+}
+
+div .content { 
+  overflow: hidden;
+  margin: 10px;
+  text-align: justify;
+}
+
+div textarea {
+  width: 100%;
+  min-height: 375px;
+  font-size: 1em;
+  background: none;
+  border: none;
+}
+div textarea:focus {
+  font-size: 1em;
+  outline: none;
+}
+
+.hidden { 
+  display: none;
+}
