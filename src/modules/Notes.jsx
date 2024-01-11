@@ -1,6 +1,6 @@
-// Notes.jsx
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion"
 
 const Notes = ({ listData, setListData }) => {
   const [editedText, setEditedText] = useState("");
@@ -37,10 +37,29 @@ const Notes = ({ listData, setListData }) => {
     }
   }, [editIndex]);
 
+
+
+  const divAnimation = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  }
+
   return (
     <div className="list">
       {listData.map((note, index) => (
-        <div className="item" key={index}>
+        <motion.div 
+        className="item" 
+        key={index}
+        variants={divAnimation} 
+        initial="hidden" 
+        animate="visible">
           <div className="header">
             <button className="controls" onClick={() => handleEdit(index)}>
               <FaEdit />
@@ -64,7 +83,7 @@ const Notes = ({ listData, setListData }) => {
               )}
             </p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
